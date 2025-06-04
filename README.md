@@ -1,6 +1,6 @@
 # License Management System
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-Click%20Here-blue?style=for-the-badge)](https://license-management-system-azure.vercel.app)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Click%20Here-blue?style=for-the-badge)](https://license-management-system-sand.vercel.app/)
 
 A comprehensive solution for software license management with secure verification capabilities. This system provides separate portals for administrators and users, along with a robust API for license verification in client applications.
 
