@@ -1,0 +1,43 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Admin {
+  id        String   @id @default(cuid())
+  username  String   @unique
+  password  String
+  role      String   // "owner" or "admin"
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model User {
+  id        String    @id @default(cuid())
+  username  String
+  userHash  String    @unique
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  licenses  License[]
+}
+
+model License {
+  id                     String   @id @default(cuid())
+  licenseKey             String   @unique
+  user                   User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId                 String
+  softwareName           String
+  expirationDate         DateTime
+  hardwareId             String?
+  hardwareBindingEnabled Boolean  @default(false)
+  status                 String   @default("active")
+  createdAt              DateTime @default(now())
+  updatedAt              DateTime @updatedAt
+}
