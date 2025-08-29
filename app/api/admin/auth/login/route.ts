@@ -55,7 +55,7 @@ export async function POST(req: NextRequest) {
         
         // Set cookie
         const response = NextResponse.json(
-          { success: true, message: 'Owner account created and logged in' },
+          { success: true, message: 'Success' },
           { status: 201 }
         );
         
