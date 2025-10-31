@@ -6,6 +6,9 @@ A comprehensive solution for software license management with secure verificatio
 
 ![License Management System](https://i.postimg.cc/pVY5JrLM/chrome-ZJIMhmch3f.png)
 
+AdminUser: testuser
+AdminPassword: testpass
+
 ## Features
 
 ### Admin Portal
